@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "46B956DDE586D276ADA7765B67C1587B2E974D67",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "46B956DDE586D276ADA7765B67C1587B2E974D67" : 0,
+    "5F62D0CEF8774948C1BCFC42AFE72AF82C751140" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "497EEE59-8861-48EB-AF59-4DFA1D3EDA64",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "46B956DDE586D276ADA7765B67C1587B2E974D67" : "MandelSfml1\/",
+    "5F62D0CEF8774948C1BCFC42AFE72AF82C751140" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MandelSfml1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MandelSfml1.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JohnDorsey\/MandelSfml1",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46B956DDE586D276ADA7765B67C1587B2E974D67"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JohnDorsey\/MandelSfml1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5F62D0CEF8774948C1BCFC42AFE72AF82C751140"
+    }
+  ]
+}
