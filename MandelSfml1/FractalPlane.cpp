@@ -9,15 +9,12 @@
 
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
-#include "FractalVis.hpp"
 #include "FractalPlane.hpp"
+#include "FractalVis.hpp"
 
 std::vector<float> vects[256][256];
 
-
-
-
-FractalVis fractVis; //works from here
+FractalVis fractalVis;
 
 FractalPlane::FractalPlane() {
     for (int x = 0; x < 256; x++) {
@@ -27,7 +24,6 @@ FractalPlane::FractalPlane() {
         }
     }
 };
-
 
 
 void FractalPlane::drawToArray(int (&itrCount)[256][256]) {
@@ -64,8 +60,7 @@ void FractalPlane::iterate() {
 
 
 void FractalPlane::iteratePoint(int x, int y) {
-    std::vector<float>* thisPt;
-    thisPt = &vects[x][y];
+    std::vector<float>* thisPt = &vects[x][y];
     
     for (; (*thisPt)[4] < 32; (*thisPt)[4]++) {
         (*thisPt) = {((*thisPt)[0] * (*thisPt)[0]) - ((*thisPt)[1] * (*thisPt)[1]) + (*thisPt)[2], ((*thisPt)[0] * (*thisPt)[1] * 2) + (*thisPt)[3], (*thisPt)[2], (*thisPt)[3], (*thisPt)[4] + 1};

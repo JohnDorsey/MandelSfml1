@@ -12,7 +12,6 @@
 #include "FractalVis.hpp"
 #include "FractalPlane.hpp"
 
-
 FractalPlane fractPlane;
 
 sf::Image frame;

@@ -17,9 +17,10 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include "ResourcePath.hpp"
 #include "FractalVis.hpp"
 
-FractalVis fractalVis;
+FractalVis fractVis;
 
 int main(int argc, char const** argv)
 {
@@ -27,11 +28,11 @@ int main(int argc, char const** argv)
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
 
     // Set the Icon
-    sf::Image icon;
-    if (!icon.loadFromFile("icon.png")) {
-        return EXIT_FAILURE;
-    }
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    //sf::Image icon;
+    //if (!icon.loadFromFile("icon.png")) {
+    //    return EXIT_FAILURE;
+    //}
+    //window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     // Load a sprite to display
     sf::Texture texture;
@@ -78,14 +79,19 @@ int main(int argc, char const** argv)
         // Clear screen
         window.clear();
 
+        fractVis.doFrame(texture);
+        
         // Draw the sprite
         window.draw(sprite);
 
         // Draw the string
         window.draw(text);
+        
 
         // Update the window
         window.display();
+        
+        printf(" frameComplete");
     }
 
     return EXIT_SUCCESS;
