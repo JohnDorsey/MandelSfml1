@@ -10,9 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include "FractalVis.hpp"
-#include "FractalPlane.hpp"
 
-FractalPlane fractPlane;
 
 sf::Image frame;
 //sf::Texture screen;
@@ -25,8 +23,7 @@ FractalVis::FractalVis() {
 };
 
 void FractalVis::doFrame(sf::Texture& screen) {
-    fractPlane.iterate();
-    fractPlane.drawTo1DArray(itrCounts1D);
+    //fractPlane.drawTo1DArray(itrCounts1D);
     drawFrame(screen);
 };
 
