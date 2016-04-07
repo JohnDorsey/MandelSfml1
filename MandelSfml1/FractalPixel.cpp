@@ -8,8 +8,12 @@
 
 #include "FractalPixel.hpp"
 
+MathPoint mathPt;
 
-
-FractalPixel::FractalPixel() {
+FractalPixel::FractalPixel(FractalPanel &parentPanel) {
     
+};
+
+void startAt(float nx, float ny) {
+    mathPt.moveTo();
 };

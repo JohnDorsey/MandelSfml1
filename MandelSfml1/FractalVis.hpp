@@ -19,8 +19,6 @@ public:
     void doFrame(sf::Texture&);
     void drawFrame(sf::Texture&);
     //void drawFrame(sf::Texture&);
-    
-    
 };
 
 #endif /* FractalVis_hpp */

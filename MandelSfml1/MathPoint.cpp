@@ -1,32 +1,36 @@
 //
-//  FractalPoint.cpp
+//  MathPoint.cpp (formerly FractalPoint.cpp)
 //  MandelSfml1
 //
 //  Created by John Dorsey on 4/5/16.
 //  Copyright © 2016 John Dorsey. All rights reserved.
 //
 
-#include "FractalPoint.hpp"
+#include "MathPoint.hpp"
 
 
 std::vector<float> thisPt;
-float thresh;
+float thresh = 4;
 bool escaped;
 
-FractalPoint::FractalPoint(float r, float i) {
+MathPoint::MathPoint() {
+    moveTo(0.0f, 0.0f);
+};
+
+void MathPoint::moveTo(float nr, float ni) {
     thisPt = std::__1::vector<float, std::__1::allocator<float>>(5);
-    thisPt = {r, i, r, i, 0};
+    thisPt = {nr, ni, nr, ni, 0};
     escaped = false;
 };
 
-void FractalPoint::solve() {
+void MathPoint::solve() {
     for (; thisPt[4] < 32; ) {
         iter();
         if ((thisPt[0] * thisPt[0]) + (thisPt[1] * thisPt[1]) > thresh) { escaped = true; break; }
     }
 };
 
-void FractalPoint::iter() {
+void MathPoint::iter() {
     thisPt = { (thisPt[0] * thisPt[0]) - (thisPt[1] * thisPt[1]) + thisPt[2], (thisPt[0] * thisPt[1] * 2) + thisPt[3], thisPt[2], thisPt[3], thisPt[4] + 1 };
 };
 
