@@ -8,14 +8,14 @@
 
 #include "FractalPanel.hpp"
 
-float travel;
-float x;
-float y;
+float travel = 4;
+float x = 0.0f;
+float y = 0.0f;
 
 FractalPanel::FractalPanel() {
     
 };
 
-void FractalPanel::whatsMyRI(float chx, float chy) {
-    
+std::vector<float> FractalPanel::whatsMyri(std::vector<float> chxy) {
+    return std::vector<float> { ((chxy[0] - 0.5f) * travel) + x, ((chxy[1] - 0.5f) * travel) + y };
 };

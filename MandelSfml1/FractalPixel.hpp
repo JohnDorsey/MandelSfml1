@@ -16,6 +16,7 @@
 class FractalPixel {
 public:
     FractalPixel(FractalPanel &parentPanel);
+    float getPalette();
 };
 
 #endif /* FractalPixel_hpp */

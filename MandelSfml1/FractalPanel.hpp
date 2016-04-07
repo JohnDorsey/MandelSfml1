@@ -10,11 +10,12 @@
 #define FractalPanel_hpp
 
 #include <stdio.h>
+#include "vector"
 
 class FractalPanel {
 public:
     FractalPanel();
-    whatsMyRI(float chx, float chy);
+    std::vector<float> whatsMyri(std::vector<float> chxy);
 };
 
 #endif /* FractalPanel_hpp */

@@ -9,11 +9,16 @@
 #include "FractalPixel.hpp"
 
 MathPoint mathPt;
+FractalPanel* parentPanel;
 
-FractalPixel::FractalPixel(FractalPanel &parentPanel) {
-    
+FractalPixel::FractalPixel(FractalPanel &nParentPanel) {
+    parentPanel = &nParentPanel;
 };
 
-void startAt(float nx, float ny) {
-    mathPt.moveTo();
+void startAt(std::vector<float> newxy) {
+    mathPt.moveTo(parentPanel -> whatsMyri(newxy));
+};
+
+float getPalette() {
+    return (float) mathPt.getIters(); //expand on this as soon as references to neighbors are available!
 };

@@ -16,9 +16,10 @@
 class MathPoint {
 public:
     MathPoint();
-    void moveTo(float nr, float ni);
+    void moveTo(std::vector<float> newri);
     void solve();
     void iter();
+    int getIters();
 };
 
 #endif /* MathPoint_hpp */

@@ -14,12 +14,12 @@ float thresh = 4;
 bool escaped;
 
 MathPoint::MathPoint() {
-    moveTo(0.0f, 0.0f);
+    moveTo(*new std::vector<float> {0.0f, 0.0f});
 };
 
-void MathPoint::moveTo(float nr, float ni) {
+void MathPoint::moveTo(std::vector<float> newri) {
     thisPt = std::__1::vector<float, std::__1::allocator<float>>(5);
-    thisPt = {nr, ni, nr, ni, 0};
+    thisPt = {newri[0], newri[1], newri[0], newri[1], 0};
     escaped = false;
 };
 
@@ -32,6 +32,10 @@ void MathPoint::solve() {
 
 void MathPoint::iter() {
     thisPt = { (thisPt[0] * thisPt[0]) - (thisPt[1] * thisPt[1]) + thisPt[2], (thisPt[0] * thisPt[1] * 2) + thisPt[3], thisPt[2], thisPt[3], thisPt[4] + 1 };
+};
+
+int getIters() {
+    return thisPt[4]; //fix this later!
 };
 
 
