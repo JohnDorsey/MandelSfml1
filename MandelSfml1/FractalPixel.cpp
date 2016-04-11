@@ -11,8 +11,8 @@
 MathPoint mathPt;
 FractalPanel* parentPanel;
 
-FractalPixel::FractalPixel(FractalPanel &nParentPanel) {
-    parentPanel = &nParentPanel;
+FractalPixel::FractalPixel(FractalPanel nParentPanel) {
+    //parentPanel = &nParentPanel;
 };
 
 void startAt(std::vector<float> newxy) {
