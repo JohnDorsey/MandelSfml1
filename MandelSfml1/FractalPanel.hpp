@@ -16,6 +16,7 @@ class FractalPanel {
 public:
     FractalPanel();
     void populate();
+    void drawToPaletteArray();
     std::vector<float> whatsMyri(std::vector<float> chxy);
 };
 

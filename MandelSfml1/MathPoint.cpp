@@ -34,7 +34,7 @@ void MathPoint::iter() {
     thisPt = { (thisPt[0] * thisPt[0]) - (thisPt[1] * thisPt[1]) + thisPt[2], (thisPt[0] * thisPt[1] * 2) + thisPt[3], thisPt[2], thisPt[3], thisPt[4] + 1 };
 };
 
-int getIters() {
+int MathPoint::getIters() {
     return thisPt[4]; //fix this later!
 };
 

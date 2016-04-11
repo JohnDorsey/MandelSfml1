@@ -13,19 +13,19 @@ float travel = 4;
 const int startRes = 256;
 float x = 0.0f;
 float y = 0.0f;
+//const FractalPanel &myself;
 
 FractalPixel pixels[startRes][startRes];
 
 FractalPanel::FractalPanel() {
-    
+    for (int i = 0; i < startRes; i++) {
+        for (int ii = 0; ii < startRes; i++) {
+            pixels[i][ii] = *new FractalPixel(this);
+        }
+    }
 };
 
 void FractalPanel::populate() {
-    for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; i++) {
-            pixels[i][ii] = new FractalPixel(&this);
-        }
-    }
 };
 
 std::vector<float> FractalPanel::whatsMyri(std::vector<float> chxy) {

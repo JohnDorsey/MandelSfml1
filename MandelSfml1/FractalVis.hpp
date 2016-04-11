@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include "vector"
+#include "FractalPanel.hpp"
 
 class FractalVis { //identical
 public:

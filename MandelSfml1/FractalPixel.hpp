@@ -11,12 +11,12 @@
 
 #include <stdio.h>
 #include "MathPoint.hpp"
-#include "FractalPanel.cpp"
+#include "FractalPanel.hpp"
 
 class FractalPixel {
 public:
     FractalPixel();
-    FractalPixel(FractalPanel const &nParentPanel);
+    FractalPixel(FractalPanel *nParentPanel);
     float getPalette();
 };
 
