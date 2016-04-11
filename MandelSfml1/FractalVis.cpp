@@ -18,6 +18,7 @@ int itrCounts[256][256];
 int itrCounts1D[65536];
 sf::Uint8 itrCounts1DUint8[65536];
 
+
 FractalVis::FractalVis() {
     frame.loadFromFile(resourcePath() + "cute_image.jpg");
 };

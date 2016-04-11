@@ -7,6 +7,7 @@
 //
 
 #include "FractalPanel.hpp"
+#include "FractalPixel.hpp"
 
 float travel = 4;
 const int startRes = 256;

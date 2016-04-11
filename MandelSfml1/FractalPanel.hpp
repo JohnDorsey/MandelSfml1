@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include "vector"
-#include "FractalPixel.hpp"
 
 class FractalPanel {
 public:
