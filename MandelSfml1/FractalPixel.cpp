@@ -19,10 +19,10 @@ FractalPixel::FractalPixel(FractalPanel *nParentPanel) {
     parentPanel = nParentPanel;
 };
 
-void startAt(std::vector<float> newxy) {
+void FractalPixel::startAt(std::vector<float> newxy) {
     mathPt.moveTo(parentPanel -> whatsMyri(newxy));
 };
 
-float getPalette() {
+float FractalPixel::getPalette() {
     return (float) mathPt.getIters(); //expand on this as soon as references to neighbors are available!
 };

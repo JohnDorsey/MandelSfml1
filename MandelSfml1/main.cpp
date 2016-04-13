@@ -24,6 +24,8 @@ FractalVis fractVis;
 
 int main(int argc, char const** argv)
 {
+    printf("program started");
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
 

@@ -11,12 +11,15 @@
 
 #include <stdio.h>
 #include "vector"
+#include "FractalPixel.hpp"
+
+//class FractalPixel;
 
 class FractalPanel {
 public:
     FractalPanel();
     void populate();
-    void drawToPaletteArray();
+    void drawToPaletteArray(float (&drawTo)[256][256]);
     std::vector<float> whatsMyri(std::vector<float> chxy);
 };
 

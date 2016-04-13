@@ -5,6 +5,13 @@
 //  Created by John Dorsey on 4/5/16.
 //  Copyright © 2016 John Dorsey. All rights reserved.
 //
+//****************************************************
+//
+//  This class is responsible for all Fractal math.
+//  it can only provide an iteration count. it makes no intelligent decisions.
+//  changing the code in this class can change ONLY the output fractal shape.
+//
+
 
 #include "MathPoint.hpp"
 
@@ -35,7 +42,8 @@ void MathPoint::iter() {
 };
 
 int MathPoint::getIters() {
-    return thisPt[4]; //fix this later!
+    //return thisPt[4]; //fix this later!
+    return (thisPt[0] + thisPt[1] + 2) * 64;
 };
 
 

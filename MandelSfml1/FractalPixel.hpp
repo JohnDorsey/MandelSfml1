@@ -13,10 +13,14 @@
 #include "MathPoint.hpp"
 #include "FractalPanel.hpp"
 
+class FractalPanel;
+
 class FractalPixel {
 public:
     FractalPixel();
-    FractalPixel(FractalPanel *nParentPanel);
+        FractalPixel(FractalPanel *nParentPanel);
+    
+    void startAt(std::vector<float> newxy);
     float getPalette();
 };
 

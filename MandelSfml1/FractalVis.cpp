@@ -14,11 +14,12 @@
 
 sf::Image frame;
 //sf::Texture screen;
-int itrCounts[256][256];
-int itrCounts1D[65536];
-sf::Uint8 itrCounts1DUint8[65536];
+//int itrCounts[256][256];
+//int itrCounts1D[65536];
+sf::Uint8 colors1DUint8[65536];
 
-FractalPanel fractPanel;
+//FractalPanel fractPanel;
+FractalRasterizer fractRast;
 
 
 FractalVis::FractalVis() {
@@ -27,13 +28,15 @@ FractalVis::FractalVis() {
 
 void FractalVis::doFrame(sf::Texture& screen) {
     //fractPlane.drawTo1DArray(itrCounts1D);
+    fractRast.drawTo1DArray(colors1DUint8);
     drawFrame(screen);
 };
 
 
 void FractalVis::drawFrame(sf::Texture& screen) {
-    for (int i = 0; i < 65536; i++) { itrCounts1DUint8[i] = (sf::Uint8) itrCounts1D[i]; } //convert int array to sf::Uint8 array
-    frame.create(256, 256, &(*itrCounts1DUint8));
+    //for (int i = 0; i < 65536; i++) { colors1DUint8[i] = (sf::Uint8) itrCounts1D[i]; } //convert int array to sf::Uint8 array
+    //frame.create(256, 256, &(*itrCounts1DUint8));
+    frame.create(256, 256, &(*colors1DUint8));
     screen.loadFromImage(frame);
 };
 

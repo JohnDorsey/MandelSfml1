@@ -7,7 +7,6 @@
 //
 
 #include "FractalPanel.hpp"
-#include "FractalPixel.hpp"
 
 float travel = 4;
 const int startRes = 256;
@@ -18,14 +17,29 @@ float y = 0.0f;
 FractalPixel pixels[startRes][startRes];
 
 FractalPanel::FractalPanel() {
+    populate();
+};
+
+void FractalPanel::populate() {
     for (int i = 0; i < startRes; i++) {
         for (int ii = 0; ii < startRes; i++) {
-            pixels[i][ii] = *new FractalPixel(this);
+//            pixels[i][ii] = *new FractalPixel(this);
+            pixels[i][ii] = *new FractalPixel();
+        }
+    }
+    for (int i = 0; i < startRes; i++) {
+        for (int ii = 0; ii < startRes; i++) {
+            pixels[i][ii].startAt(std::vector<float> {(float) i, (float) ii});
         }
     }
 };
 
-void FractalPanel::populate() {
+void FractalPanel::drawToPaletteArray(float (&drawTo)[256][256]) {
+    for (int i = 0; i < startRes; i++) {
+        for (int ii = 0; ii < startRes; ii++) {
+            drawTo[i][ii] = pixels[i][ii].getPalette();
+        }
+    }
 };
 
 std::vector<float> FractalPanel::whatsMyri(std::vector<float> chxy) {
