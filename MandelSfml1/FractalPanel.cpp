@@ -22,13 +22,13 @@ FractalPanel::FractalPanel() {
 
 void FractalPanel::populate() {
     for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; i++) {
+        for (int ii = 0; ii < startRes; ii++) {
 //            pixels[i][ii] = *new FractalPixel(this);
             pixels[i][ii] = *new FractalPixel();
         }
     }
     for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; i++) {
+        for (int ii = 0; ii < startRes; ii++) {
             pixels[i][ii].startAt(std::vector<float> {(float) i, (float) ii});
         }
     }
