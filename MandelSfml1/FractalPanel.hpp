@@ -20,6 +20,7 @@ public:
     FractalPanel();
     void populate();
     void drawToPaletteArray(float (&drawTo)[256][256]);
+    void solveAll();
     std::vector<float> whatsMyri(std::vector<float> chxy);
 };
 

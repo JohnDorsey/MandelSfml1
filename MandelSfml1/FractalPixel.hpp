@@ -18,8 +18,8 @@ class FractalPanel;
 class FractalPixel {
 public:
     FractalPixel();
-        FractalPixel(FractalPanel *nParentPanel);
-    
+    FractalPixel(FractalPanel *nParentPanel);
+    void solve();
     void startAt(std::vector<float> newxy);
     float getPalette();
 };

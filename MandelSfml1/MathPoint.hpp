@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "vector"
 #include <cmath>
+#include <ctime>
 
 class MathPoint {
 public:
@@ -20,6 +21,7 @@ public:
     void solve();
     void iter();
     int getIters();
+    void dbgPrintUniq();
 };
 
 #endif /* MathPoint_hpp */

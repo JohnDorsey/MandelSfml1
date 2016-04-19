@@ -61,6 +61,9 @@ int main(int argc, char const** argv)
     // Play the music
     music.play();
 
+    
+    fractVis.doFrame(texture);
+    
     // Start the game loop
     while (window.isOpen())
     {
@@ -82,7 +85,6 @@ int main(int argc, char const** argv)
         // Clear screen
         window.clear();
 
-        fractVis.doFrame(texture);
         
         // Draw the sprite
         window.draw(sprite);
@@ -95,6 +97,9 @@ int main(int argc, char const** argv)
         window.display();
         
         printf(" frameComplete");
+//        for (int i = 0; i < 524288; i++) {
+//            printf("AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMMNNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZ");
+//        }
     }
 
     return EXIT_SUCCESS;

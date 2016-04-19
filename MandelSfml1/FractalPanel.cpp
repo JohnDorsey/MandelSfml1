@@ -8,40 +8,51 @@
 
 #include "FractalPanel.hpp"
 
-float travel = 4;
-const int startRes = 256;
+//float travel = 4;
+//const int startRes = 256;
 float x = 0.0f;
 float y = 0.0f;
 //const FractalPanel &myself;
 
-FractalPixel pixels[startRes][startRes];
+FractalPixel pixels[256][256];
 
 FractalPanel::FractalPanel() {
     populate();
 };
 
 void FractalPanel::populate() {
-    for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; ii++) {
-//            pixels[i][ii] = *new FractalPixel(this);
-            pixels[i][ii] = *new FractalPixel();
+    for (int i = 0; i < 256; i++) {
+        for (int ii = 0; ii < 256; ii++) {
+            pixels[i][ii] = *new FractalPixel(this);
+            //pixels[i][ii] = *new FractalPixel();
         }
     }
-    for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; ii++) {
+    for (int i = 0; i < 256; i++) {
+        for (int ii = 0; ii < 256; ii++) {
             pixels[i][ii].startAt(std::vector<float> {(float) i, (float) ii});
+        }
+    }
+    solveAll();
+};
+
+void FractalPanel::solveAll() {
+    for (int i = 0; i < 256; i++) {
+        for (int ii = 0; ii < 256; ii++) {
+            printf("%s %i %i", "\n", i, ii);
+            pixels[i][ii].solve();
         }
     }
 };
 
 void FractalPanel::drawToPaletteArray(float (&drawTo)[256][256]) {
-    for (int i = 0; i < startRes; i++) {
-        for (int ii = 0; ii < startRes; ii++) {
+    for (int i = 0; i < 256; i++) {
+        for (int ii = 0; ii < 256; ii++) {
             drawTo[i][ii] = pixels[i][ii].getPalette();
+            printf("%f", drawTo[i][ii]);
         }
     }
 };
 
 std::vector<float> FractalPanel::whatsMyri(std::vector<float> chxy) {
-    return std::vector<float> { ((chxy[0] - 0.5f) * travel) + x, ((chxy[1] - 0.5f) * travel) + y };
+    return std::vector<float> { (((chxy[0] / 256) - 0.5f) * 4) + x, (((chxy[1] / 256) - 0.5f) * 4) + y };
 };
