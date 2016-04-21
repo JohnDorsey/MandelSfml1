@@ -8,8 +8,7 @@
 
 #include "FractalPixel.hpp"
 
-MathPoint mathPt;
-FractalPanel* parentPanel;
+
 
 FractalPixel::FractalPixel() {
     
@@ -30,4 +29,8 @@ float FractalPixel::getPalette() {
 
 void FractalPixel::solve() {
     mathPt.solve();
+};
+
+void FractalPixel::dbgPrintUniq() {
+    mathPt.dbgPrintUniq();
 };

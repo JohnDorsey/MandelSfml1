@@ -17,12 +17,11 @@
 #include <string>
 
 
-std::vector<float> thisPt;
 float thresh = 4;
 bool escaped;
 
 MathPoint::MathPoint() {
-    moveTo(*new std::vector<float> {2.0f, 2.0f});
+    moveTo(*new std::vector<float> {1.6f, 1.6f});
     //solve();
 };
 
@@ -30,12 +29,11 @@ void MathPoint::moveTo(std::vector<float> newri) {
     thisPt = std::__1::vector<float, std::__1::allocator<float>>(5);
     thisPt = {newri[0], newri[1], newri[0], newri[1], 0};
     escaped = false;
-    std::printf(" %s %f %f", "MT", newri[0], newri[1]);
+    //std::printf(" %s %f %f", "MT", newri[0], newri[1]);
 };
 
 void MathPoint::solve() {
     for (; thisPt[4] < 32; ) {
-        dbgPrintUniq();
         iter();
         if ((thisPt[0] * thisPt[0]) + (thisPt[1] * thisPt[1]) > 4) { escaped = true; break; }
     }
@@ -47,15 +45,15 @@ void MathPoint::iter() {
 };
 
 int MathPoint::getIters() {
-    //return (escaped? thisPt[4] * 8.0f : 1.1f); //fix this later!
+    return (escaped? (thisPt[4] * 8.0f) : 1.1f); //fix this later!
     //dbgPrintUniq();
-    return (thisPt[0] + thisPt[1] ) * 256;
+    //return (thisPt[0] + thisPt[1] ) * 256;
     //printf("%f", srand(time()));
 };
 
 void MathPoint::dbgPrintUniq() {
-    //printf("%s%f%f%f%f%f%f", "Q", thisPt[0], thisPt[1], thisPt[2], thisPt[3], thisPt[4], (escaped? 3.14f : 6.28f));
-    printf("#");
+    printf("%s%f%f%f%f%f%f", "Q", thisPt[0], thisPt[1], thisPt[2], thisPt[3], thisPt[4], (escaped? 3.14f : 6.28f));
+    //printf("#");
 };
 
 

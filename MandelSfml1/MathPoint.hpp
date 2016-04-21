@@ -16,6 +16,7 @@
 
 class MathPoint {
 public:
+    std::vector<float> thisPt;
     MathPoint();
     void moveTo(std::vector<float> newri);
     void solve();

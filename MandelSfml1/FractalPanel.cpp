@@ -23,8 +23,8 @@ FractalPanel::FractalPanel() {
 void FractalPanel::populate() {
     for (int i = 0; i < 256; i++) {
         for (int ii = 0; ii < 256; ii++) {
-            pixels[i][ii] = *new FractalPixel(this);
-            //pixels[i][ii] = *new FractalPixel();
+            //pixels[i][ii] = FractalPixel(this, i * ii);
+            pixels[i][ii] = FractalPixel(this);
         }
     }
     for (int i = 0; i < 256; i++) {
@@ -38,8 +38,9 @@ void FractalPanel::populate() {
 void FractalPanel::solveAll() {
     for (int i = 0; i < 256; i++) {
         for (int ii = 0; ii < 256; ii++) {
-            printf("%s %i %i", "\n", i, ii);
+            printf("%s %i %i", "\nsolveAll:", i, ii);
             pixels[i][ii].solve();
+            //pixels[i][ii].dbgPrintUniq();
         }
     }
 };

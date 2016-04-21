@@ -17,6 +17,9 @@ class FractalPanel;
 
 class FractalPixel {
 public:
+    MathPoint mathPt;
+    void dbgPrintUniq();
+    FractalPanel* parentPanel;
     FractalPixel();
     FractalPixel(FractalPanel *nParentPanel);
     void solve();
