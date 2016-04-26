@@ -26,7 +26,7 @@ int main(int argc, char const** argv)
 {
     
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(512, 512), "SFML window");
     
     printf("a");
     
@@ -42,15 +42,21 @@ int main(int argc, char const** argv)
     if (!texture.loadFromFile("cute_image.jpg")) {
         return EXIT_FAILURE;
     }
+    texture.create(256, 256);
+    texture.setSmooth(true);
     sf::Sprite sprite(texture);
+    //sprite.setOrigin(256.0f, 256.0f);
+    sprite.setPosition(0.0f, 512.0f);
+    sprite.setScale(2.0f, 2.0f);
+    sprite.setRotation(270.0f);
 
     // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile("sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("Hello SFML", font, 50);
-    text.setColor(sf::Color::Black);
+    //sf::Font font;
+    //if (!font.loadFromFile("sansation.ttf")) {
+    //    return EXIT_FAILURE;
+    //}
+    //sf::Text text("Hello SFML", font, 50);
+    //text.setColor(sf::Color::Black);
 
     // Load a music to play
     sf::Music music;
@@ -63,6 +69,13 @@ int main(int argc, char const** argv)
 
     
     fractVis.doFrame(texture);
+    
+    //for (int xTest = 0; xTest < 256; xTest++) {
+    //    for (int yTest = 0; yTest < 256; yTest++) {
+    //        std::vector<float> result = fractVis.fractRast.fractPanel.whatsMyri(std::vector<float> {(float) xTest, (float) yTest} );
+    //        printf(" %f%s%f", result[0], "#", result[1]);
+    //    }
+    //}
     
     // Start the game loop
     while (window.isOpen())
@@ -80,8 +93,19 @@ int main(int argc, char const** argv)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
+            if (event.type == sf::Event::Resized) {
+                sf::Vector2u newSize = window.sf::Window::getSize();
+                int newAvg = (newSize.x + newSize.y) / 2;
+                newSize.x = newAvg;
+                newSize.y = newAvg;
+                window.setSize(newSize);
+            }
         }
 
+        
+        fractVis.doFrame(texture);
+        
         // Clear screen
         window.clear();
 
@@ -90,11 +114,13 @@ int main(int argc, char const** argv)
         window.draw(sprite);
 
         // Draw the string
-        window.draw(text);
+        //window.draw(text);
         
 
         // Update the window
         window.display();
+        
+        printf("%i %i", texture.getSize().x, texture.getSize().y);
         
         printf(" frameComplete");
 //        for (int i = 0; i < 524288; i++) {

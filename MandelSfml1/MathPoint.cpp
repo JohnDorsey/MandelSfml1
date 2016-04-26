@@ -33,11 +33,11 @@ void MathPoint::moveTo(std::vector<float> newri) {
 };
 
 void MathPoint::solve() {
-    for (; thisPt[4] < 32; ) {
+    for (; thisPt[4] < 64; ) {
         iter();
         if ((thisPt[0] * thisPt[0]) + (thisPt[1] * thisPt[1]) > 4) { escaped = true; break; }
     }
-    printf(escaped? "Esc" : "Tra");
+    //printf(escaped? "Esc" : "Tra");
 };
 
 void MathPoint::iter() {
@@ -45,7 +45,7 @@ void MathPoint::iter() {
 };
 
 int MathPoint::getIters() {
-    return (escaped? (thisPt[4] * 8.0f) : 1.1f); //fix this later!
+    return (escaped? (thisPt[4] * 8.0f) : 0.0f); //fix this later!
     //dbgPrintUniq();
     //return (thisPt[0] + thisPt[1] ) * 256;
     //printf("%f", srand(time()));

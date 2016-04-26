@@ -19,11 +19,13 @@ FractalPixel::FractalPixel(FractalPanel *nParentPanel) {
 };
 
 void FractalPixel::startAt(std::vector<float> newxy) {
-    //printf("%s %f %f", " SA", newxy[0], newxy[1]);
+    //printf(" %s %f %f", " SA", newxy[0], newxy[1]);
+    //dbgPositionPalette = (newxy[0]) * (newxy[1]);
     mathPt.moveTo(parentPanel -> whatsMyri(newxy));
 };
 
 float FractalPixel::getPalette() {
+    //return dbgPositionPalette;
     return (float) mathPt.getIters(); //expand on this as soon as references to neighbors are available!
 };
 

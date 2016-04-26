@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/FractalPixel.cpp"
-            timestampString = "482936502.113615"
+            timestampString = "483366483.658865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/FractalPixel.cpp"
-            timestampString = "482936502.113615"
+            timestampString = "483366483.658865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -161,6 +161,70 @@
             endingLineNumber = "17"
             landmarkName = "class FractalPixel"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MandelSfml1/FractalRasterizer.cpp"
+            timestampString = "483367827.759099"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "FractalRasterizer::updatePalette()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FractalRasterizer::drawTo1DArray(unsigned char (&amp;) [65536])"
+                  moduleName = "MandelSfml1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/John/Desktop/MandelSfml1/MandelSfml1/MandelSfml1/FractalRasterizer.cpp"
+                  timestampString = "483366279.255469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FractalRasterizer::updatePalette()"
+                  moduleName = "MandelSfml1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/John/Desktop/MandelSfml1/MandelSfml1/MandelSfml1/FractalRasterizer.cpp"
+                  timestampString = "483366279.256146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MandelSfml1/FractalPixel.cpp"
+            timestampString = "483366483.658865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "FractalPixel::startAt(std::vector&lt;float&gt; newxy)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

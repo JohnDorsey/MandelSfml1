@@ -16,8 +16,9 @@
 
 class FractalRasterizer {
 public:
+    FractalPanel fractPanel;
     FractalRasterizer();
-    void drawTo1DArray(sf::Uint8 (&drawTo)[65536]);
+    void drawTo1DArray(sf::Uint8 (&drawTo)[262144]);
     void updatePalette();
     int colorFromPalette(float index);
 };
