@@ -10,9 +10,8 @@
 #define FractalPixel_hpp
 
 #include <stdio.h>
+#include "vector"
 #include "MathPoint.hpp"
-#include "FractalPanel.hpp"
-
 class FractalPanel;
 
 class FractalPixel {

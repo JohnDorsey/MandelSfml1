@@ -10,9 +10,7 @@
 #define Sequence_hpp
 
 #include <stdio.h>
-//#include "FractalPixel.hpp"
-
-class FractalPixel;
+#include "FractalPixel.hpp"
 
 class Sequence {
 public:

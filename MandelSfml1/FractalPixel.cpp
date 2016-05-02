@@ -8,6 +8,7 @@
 
 #include "FractalPixel.hpp"
 
+#include "FractalPanel.hpp"
 
 
 FractalPixel::FractalPixel() {

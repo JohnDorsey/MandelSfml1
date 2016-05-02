@@ -11,11 +11,10 @@
 
 #include <stdio.h>
 #include "vector"
-#include "FractalPixel.hpp"
+
+class FractalPixel;
 #include "Sequence2.hpp"
 #include "Sequence.hpp"
-
-//class FractalPixel;
 
 class FractalPanel {
 public:

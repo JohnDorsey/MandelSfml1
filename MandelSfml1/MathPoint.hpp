@@ -10,6 +10,7 @@
 #define MathPoint_hpp
 
 #include <stdio.h>
+
 #include "vector"
 #include <cmath>
 #include <ctime>
