@@ -12,13 +12,18 @@
 #include <stdio.h>
 #include "vector"
 #include "FractalPixel.hpp"
+#include "Sequence2.hpp"
+#include "Sequence.hpp"
 
 //class FractalPixel;
 
 class FractalPanel {
 public:
     FractalPanel();
+    Sequence2 seqseq0;
+    Sequence2 seqseq1;
     void populate();
+    void populateSequences();
     void drawToPaletteArray(float (&drawTo)[256][256]);
     void solveAll();
     std::vector<float> whatsMyri(std::vector<float> chxy);

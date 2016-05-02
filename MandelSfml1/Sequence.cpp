@@ -7,3 +7,9 @@
 //
 
 #include "Sequence.hpp"
+#include "FractalPixel.hpp"
+
+
+Sequence::Sequence() {
+    
+};

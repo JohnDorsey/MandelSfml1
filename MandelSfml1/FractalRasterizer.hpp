@@ -20,7 +20,8 @@ public:
     FractalRasterizer();
     void drawTo1DArray(sf::Uint8 (&drawTo)[262144]);
     void updatePalette();
-    int colorFromPalette(float index);
+    std::vector<sf::Uint8> colorFromPalette(float index);
+    int partFromPalette(float index);
 };
 
 

@@ -10,5 +10,15 @@
 #define Sequence_hpp
 
 #include <stdio.h>
+//#include "FractalPixel.hpp"
+
+class FractalPixel;
+
+class Sequence {
+public:
+    Sequence();
+    int type = 0;
+    FractalPixel *refs[256];
+};
 
 #endif /* Sequence_hpp */

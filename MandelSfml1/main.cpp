@@ -70,13 +70,6 @@ int main(int argc, char const** argv)
     
     fractVis.doFrame(texture);
     
-    //for (int xTest = 0; xTest < 256; xTest++) {
-    //    for (int yTest = 0; yTest < 256; yTest++) {
-    //        std::vector<float> result = fractVis.fractRast.fractPanel.whatsMyri(std::vector<float> {(float) xTest, (float) yTest} );
-    //        printf(" %f%s%f", result[0], "#", result[1]);
-    //    }
-    //}
-    
     // Start the game loop
     while (window.isOpen())
     {

@@ -15,6 +15,7 @@
 		527734451C887374008A874A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 527734441C887374008A874A /* icon.png */; };
 		528E94491C984A8200003018 /* FractalVis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528E94451C984A8200003018 /* FractalVis.cpp */; };
 		52A79DF11CBE73E5008A060F /* FractalRasterizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52A79DEF1CBE73E5008A060F /* FractalRasterizer.cpp */; };
+		52ABCB931CD77C190050E18B /* Sequence2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52ABCB911CD77C190050E18B /* Sequence2.cpp */; };
 		52E11A981CA2CEDC00EDEE82 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52E11A971CA2CEDC00EDEE82 /* main.cpp */; };
 		52E11A991CA2D34800EDEE82 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5277343E1C887374008A874A /* cute_image.jpg */; };
 		52FBD3161CB3E0EF0022D72D /* MathPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD3141CB3E0EF0022D72D /* MathPoint.cpp */; };
@@ -38,6 +39,8 @@
 		528E94481C984A8200003018 /* FractalVis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractalVis.hpp; sourceTree = "<group>"; };
 		52A79DEF1CBE73E5008A060F /* FractalRasterizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FractalRasterizer.cpp; sourceTree = "<group>"; };
 		52A79DF01CBE73E5008A060F /* FractalRasterizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractalRasterizer.hpp; sourceTree = "<group>"; };
+		52ABCB911CD77C190050E18B /* Sequence2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence2.cpp; sourceTree = "<group>"; };
+		52ABCB921CD77C190050E18B /* Sequence2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sequence2.hpp; sourceTree = "<group>"; };
 		52E11A971CA2CEDC00EDEE82 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		52FBD3141CB3E0EF0022D72D /* MathPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathPoint.cpp; sourceTree = "<group>"; };
 		52FBD3151CB3E0EF0022D72D /* MathPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MathPoint.hpp; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				52FBD3141CB3E0EF0022D72D /* MathPoint.cpp */,
 				527734381C887374008A874A /* ResourcePath.mm */,
 				5277343A1C887374008A874A /* ResourcePath.hpp */,
+				52ABCB921CD77C190050E18B /* Sequence2.hpp */,
+				52ABCB911CD77C190050E18B /* Sequence2.cpp */,
 				5270FCF11CCFA4F000B28C4C /* Sequence.hpp */,
 				5270FCF01CCFA4F000B28C4C /* Sequence.cpp */,
 				5277343D1C887374008A874A /* Resources */,
@@ -204,6 +209,7 @@
 			files = (
 				528E94491C984A8200003018 /* FractalVis.cpp in Sources */,
 				52FBD3191CB3F40A0022D72D /* FractalPixel.cpp in Sources */,
+				52ABCB931CD77C190050E18B /* Sequence2.cpp in Sources */,
 				527734391C887374008A874A /* ResourcePath.mm in Sources */,
 				52FBD3161CB3E0EF0022D72D /* MathPoint.cpp in Sources */,
 				523ACA461CB68C48003C22B8 /* FractalPanel.cpp in Sources */,

@@ -21,16 +21,18 @@ void FractalRasterizer::drawTo1DArray(sf::Uint8 (&drawTo)[262144]) {
         for (int ii = 0; ii < 256; ii++) {
             //printf("    %i\n", ii);
             //drawTo[(ii * 256) + i] = colorFromPalette(paletteArray[i][ii]);
-            drawTo[(((i * 256) + ii) * 4)] = (sf::Uint8) colorFromPalette(paletteArray[i][ii]);
-            drawTo[(((i * 256) + ii) * 4) + 1] = (sf::Uint8) colorFromPalette(paletteArray[i][ii]);
-            drawTo[(((i * 256) + ii) * 4) + 2] = (sf::Uint8) colorFromPalette(paletteArray[i][ii]);
-            drawTo[(((i * 256) + ii) * 4) + 3] = (sf::Uint8) colorFromPalette(paletteArray[i][ii]);
+            std::vector<sf::Uint8> drawNow = colorFromPalette(paletteArray[i][ii]);
+            drawTo[(((i * 256) + ii) * 4)] = drawNow[0];
+            drawTo[(((i * 256) + ii) * 4) + 1] = drawNow[1];
+            drawTo[(((i * 256) + ii) * 4) + 2] = drawNow[2];
+            drawTo[(((i * 256) + ii) * 4) + 3] = drawNow[3];
         }
     }
 };
 
+
 void FractalRasterizer::updatePalette() {
-    fractPanel.drawToPaletteArray(paletteArray);
+    fractPanel.drawToPaletteArray(paletteArray); //get pallete indices
 //    for (int i = 0; i < 256; i++) {
 //        for (int ii = 0; ii < 256; ii++) {
 //            if (i - ii < 32) {
@@ -40,6 +42,12 @@ void FractalRasterizer::updatePalette() {
 //    }
 };
 
-int FractalRasterizer::colorFromPalette(float index) {
+
+std::vector<sf::Uint8> FractalRasterizer::colorFromPalette(float index) {
+    return (std::vector<sf::Uint8>) { (sf::Uint8) partFromPalette(index), (sf::Uint8) partFromPalette(index), (sf::Uint8) partFromPalette(index), (sf::Uint8) partFromPalette(index) };
+};
+
+
+int FractalRasterizer::partFromPalette(float index) {
     return (int) index * 65793;
 };
