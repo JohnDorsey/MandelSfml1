@@ -33,14 +33,9 @@ void FractalRasterizer::drawTo1DArray(sf::Uint8 (&drawTo)[262144]) {
 
 void FractalRasterizer::updatePalette() {
     fractPanel.drawToPaletteArray(paletteArray); //get pallete indices
-//    for (int i = 0; i < 256; i++) {
-//        for (int ii = 0; ii < 256; ii++) {
-//            if (i - ii < 32) {
-//                paletteArray[i][ii] = 255.0f;
-//            }
-//        }
-//    }
 };
+
+
 
 
 std::vector<sf::Uint8> FractalRasterizer::colorFromPalette(float index) {
@@ -50,4 +45,17 @@ std::vector<sf::Uint8> FractalRasterizer::colorFromPalette(float index) {
 
 int FractalRasterizer::partFromPalette(float index) {
     return (int) index * 65793;
+};
+
+
+
+void FractalRasterizer::dbgFillCorner() {
+    for (int i = 0; i < 256; i++) {
+        for (int ii = 0; ii < 256; ii++) {
+            if (i - ii < 32) {
+                paletteArray[i][ii] = 255.0f;
+            }
+        }
+    }
+    
 };

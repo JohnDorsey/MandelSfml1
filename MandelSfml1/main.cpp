@@ -95,10 +95,23 @@ int main(int argc, char const** argv)
                 window.setSize(newSize);
             }
         }
-
+        
+        //for (int ti = 0; ti < 12800; ti++) {
+        //    fractVis.fractRast.fractPanel.inx.inci(1);
+        //    fractVis.fractRast.fractPanel.inx.incii(1);
+        //}
+        //for (int ti = 0; ti < 12799; ti++) {
+        //    fractVis.fractRast.fractPanel.inx.inci(-1);
+        //    fractVis.fractRast.fractPanel.inx.incii(-1);
+        //}
+        //fractVis.fractRast.fractPanel.inx.incii(2);
+        //fractVis.fractRast.fractPanel.inx.incii(1);
+        
+        //fractVis.fractRast.fractPanel.dbgSet(123, 123, 24);
+        //fractVis.fractRast.fractPanel.dbgSet(125, 125, 24);
+        //fractVis.fractRast.dbgFillCorner();
         
         fractVis.doFrame(texture);
-        
         // Clear screen
         window.clear();
 
@@ -113,9 +126,9 @@ int main(int argc, char const** argv)
         // Update the window
         window.display();
         
-        printf("%i %i", texture.getSize().x, texture.getSize().y);
+        //printf("%i %i", texture.getSize().x, texture.getSize().y);
         
-        printf(" frameComplete");
+        //printf(" frameComplete");
 //        for (int i = 0; i < 524288; i++) {
 //            printf("AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMMNNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZ");
 //        }

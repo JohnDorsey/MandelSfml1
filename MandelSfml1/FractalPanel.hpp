@@ -11,18 +11,22 @@
 
 #include <stdio.h>
 #include "vector"
+#include "FractalOrganizer.hpp"
 
 class FractalPixel;
-#include "Sequence2.hpp"
-#include "Sequence.hpp"
+//#include "Sequence2.hpp"
+//#include "Sequence.hpp"
 
 class FractalPanel {
 public:
+    
+    FractalOrganizer inx;
     FractalPanel();
-    Sequence2 seqseq0;
-    Sequence2 seqseq1;
+    void dbgSet(int i, int ii, int value);
+//    Sequence2 seqseq0;
+//    Sequence2 seqseq1;
     void populate();
-    void populateSequences();
+//    void populateSequences();
     void drawToPaletteArray(float (&drawTo)[256][256]);
     void solveAll();
     std::vector<float> whatsMyri(std::vector<float> chxy);

@@ -22,6 +22,7 @@ public:
     void updatePalette();
     std::vector<sf::Uint8> colorFromPalette(float index);
     int partFromPalette(float index);
+    void dbgFillCorner();
 };
 
 
