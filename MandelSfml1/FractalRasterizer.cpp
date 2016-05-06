@@ -10,7 +10,14 @@
 
 float paletteArray[256][256];
 
+
 FractalRasterizer::FractalRasterizer() {
+    
+};
+
+
+FractalRasterizer::FractalRasterizer(FractalPanel *nSourcePanel) {
+    sourcePanel = nSourcePanel;
 };
 
 
@@ -31,17 +38,18 @@ void FractalRasterizer::drawTo1DArray(sf::Uint8 (&drawTo)[262144]) {
 };
 
 
-void FractalRasterizer::recieveNewArray(float (&inputArray)[256][256]) {
-    for (int i = 0; i < 256; i++) {
-        for (int ii = 0; ii < 256; ii++) {
-            paletteArray[i][ii] = inputArray[i][ii];
-        }
-    }
-};
+//void FractalRasterizer::recieveNewArray(float (&inputArray)[256][256]) {
+//    for (int i = 0; i < 256; i++) {
+//        for (int ii = 0; ii < 256; ii++) {
+//            paletteArray[i][ii] = inputArray[i][ii];
+//        }
+//    }
+//};
 
 
 void FractalRasterizer::updatePalette() {
-    fractPanel.drawToPaletteArray(paletteArray); //get pallete indices
+    //fractPanel.drawToPaletteArray(paletteArray); //get palette indices
+    sourcePanel -> drawToPaletteArray(paletteArray); //get palette indices
 };
 
 

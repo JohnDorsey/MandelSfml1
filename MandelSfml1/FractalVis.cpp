@@ -24,7 +24,7 @@ sf::Uint8 colors1DUint8[262144];
 
 
 FractalVis::FractalVis() {
-    //frame.loadFromFile(resourcePath() + "cute_image.jpg");
+    fractRast = *new FractalRasterizer(&fractPanel);
 };
 
 

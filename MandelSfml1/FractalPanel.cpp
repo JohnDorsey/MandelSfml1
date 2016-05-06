@@ -11,8 +11,12 @@
 
 //float travel = 4;
 //const int startRes = 256;
+//float xScale = 2;
+//float yScale = 2;
+float zoom = 0.25;
 float x = 0.0f;
 float y = 0.0f;
+float personalSpace = 0.4f;
 //const FractalPanel &myself;
 
 
@@ -37,6 +41,14 @@ void FractalPanel::populate() {
     solveAll();
     
 };
+
+
+void FractalPanel::arrange() {
+    //bool flying[256]; //if a row or column is flying, it cast off into space to be ignored for a little while. by the end of this method, all rows and columns must land somewhere.
+    //float practicalSpace = ((1 / zoom) / 256) * personalSpace; //how close two rows or columns must be for one to be launched
+    //float tempDistances[256];
+};
+
 
 
 //void FractalPanel::populateSequences() {
@@ -86,7 +98,7 @@ void FractalPanel::drawToPaletteArray(float (&drawTo)[256][256]) {
 
 
 std::vector<float> FractalPanel::whatsMyri(std::vector<float> chxy) {
-    std::vector<float> result = { ((((float) chxy[0] / 256.0f) - 0.5f) * 4.0f) + x, ((((float) chxy[1] / 256.0f) - 0.5f) * 4.0f) + y };
+    std::vector<float> result = { ((((float) chxy[0] / 256.0f) - 0.5f) / zoom) + x, ((((float) chxy[1] / 256.0f) - 0.5f) / zoom) + y };
     //printf(" %f %f", result[0], result[1]);
     return result;
     //return std::vector<float> { ((((float) chxy[0] / 256.0f) - 0.5f) * 4.0f) + x, ((((float) chxy[1] / 256.0f) - 0.5f) * 4.0f) + y };

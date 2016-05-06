@@ -107,8 +107,9 @@ int main(int argc, char const** argv)
         //fractVis.fractRast.fractPanel.inx.incii(2);
         //fractVis.fractRast.fractPanel.inx.incii(1);
         
-        //fractVis.fractRast.fractPanel.dbgSet(123, 123, 24);
-        //fractVis.fractRast.fractPanel.dbgSet(125, 125, 24);
+        fractVis.fractPanel.dbgSet(123, 123, 24);
+        fractVis.fractPanel.dbgSet(125, 125, 24);
+        fractVis.fractPanel.inx.incii(1);
         //fractVis.fractRast.dbgFillCorner();
         
         fractVis.doFrame(texture);

@@ -16,14 +16,16 @@
 
 class FractalRasterizer {
 public:
-    FractalPanel fractPanel;
+//    FractalPanel fractPanel;
+    FractalPanel* sourcePanel;
     FractalRasterizer();
+    FractalRasterizer(FractalPanel *nSourcePanel);
     void drawTo1DArray(sf::Uint8 (&drawTo)[262144]);
     void updatePalette();
     std::vector<sf::Uint8> colorFromPalette(float index);
     int partFromPalette(float index);
     void dbgFillCorner();
-    void recieveNewArray(float (&inputArray)[256][256]);
+//    void recieveNewArray(float (&inputArray)[256][256]);
 };
 
 

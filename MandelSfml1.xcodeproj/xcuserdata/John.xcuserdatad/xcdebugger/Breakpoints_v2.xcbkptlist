@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/FractalPanel.cpp"
-            timestampString = "484060045.317052"
+            timestampString = "484231051.187798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "FractalPanel::populate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/FractalPanel.cpp"
-            timestampString = "484061237.226762"
+            timestampString = "484231051.187798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "FractalPanel::populate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,13 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/FractalRasterizer.cpp"
-            timestampString = "484058818.73207"
+            timestampString = "484230638.38796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "FractalRasterizer::updatePalette()"
-            landmarkType = "5">
+            startingLineNumber = "42"
+            endingLineNumber = "42">
             <Locations>
                <Location
                   shouldBeEnabled = "No"

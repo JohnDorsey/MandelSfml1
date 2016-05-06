@@ -26,6 +26,7 @@ public:
 //    Sequence2 seqseq0;
 //    Sequence2 seqseq1;
     void populate();
+    void arrange();
 //    void populateSequences();
     void drawToPaletteArray(float (&drawTo)[256][256]);
     void solveAll();

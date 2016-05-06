@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		523ACA461CB68C48003C22B8 /* FractalPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523ACA441CB68C48003C22B8 /* FractalPanel.cpp */; };
+		5246B1551CDCD21D008F6DF1 /* FractalArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */; };
 		527075F21CDA201200B956D7 /* FractalOrganizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527075F01CDA201200B956D7 /* FractalOrganizer.cpp */; };
 		5270FCF21CCFA4F000B28C4C /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5270FCF01CCFA4F000B28C4C /* Sequence.cpp */; };
 		527734391C887374008A874A /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 527734381C887374008A874A /* ResourcePath.mm */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		523ACA441CB68C48003C22B8 /* FractalPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FractalPanel.cpp; sourceTree = "<group>"; };
 		523ACA451CB68C48003C22B8 /* FractalPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractalPanel.hpp; sourceTree = "<group>"; };
+		5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FractalArray.cpp; sourceTree = "<group>"; };
+		5246B1541CDCD21D008F6DF1 /* FractalArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractalArray.hpp; sourceTree = "<group>"; };
 		527075F01CDA201200B956D7 /* FractalOrganizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FractalOrganizer.cpp; path = ../FractalOrganizer.cpp; sourceTree = "<group>"; };
 		527075F11CDA201200B956D7 /* FractalOrganizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FractalOrganizer.hpp; path = ../FractalOrganizer.hpp; sourceTree = "<group>"; };
 		5270FCF01CCFA4F000B28C4C /* Sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				52A79DEF1CBE73E5008A060F /* FractalRasterizer.cpp */,
 				523ACA451CB68C48003C22B8 /* FractalPanel.hpp */,
 				523ACA441CB68C48003C22B8 /* FractalPanel.cpp */,
+				5246B1541CDCD21D008F6DF1 /* FractalArray.hpp */,
+				5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */,
 				52FBD3181CB3F40A0022D72D /* FractalPixel.hpp */,
 				52FBD3171CB3F40A0022D72D /* FractalPixel.cpp */,
 				52FBD3151CB3E0EF0022D72D /* MathPoint.hpp */,
@@ -217,6 +222,7 @@
 				52ABCB931CD77C190050E18B /* Sequence2.cpp in Sources */,
 				527734391C887374008A874A /* ResourcePath.mm in Sources */,
 				52FBD3161CB3E0EF0022D72D /* MathPoint.cpp in Sources */,
+				5246B1551CDCD21D008F6DF1 /* FractalArray.cpp in Sources */,
 				523ACA461CB68C48003C22B8 /* FractalPanel.cpp in Sources */,
 				52E11A981CA2CEDC00EDEE82 /* main.cpp in Sources */,
 				527075F21CDA201200B956D7 /* FractalOrganizer.cpp in Sources */,

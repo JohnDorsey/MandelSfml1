@@ -17,6 +17,7 @@
 
 class FractalVis { //identical
 public:
+    FractalPanel fractPanel;
     FractalRasterizer fractRast;
     FractalVis(); //identical
     void doFrame(sf::Texture&);
