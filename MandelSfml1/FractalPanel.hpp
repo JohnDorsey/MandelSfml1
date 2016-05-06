@@ -14,6 +14,7 @@
 #include "FractalOrganizer.hpp"
 
 class FractalPixel;
+class FractalArray;
 //#include "Sequence2.hpp"
 //#include "Sequence.hpp"
 

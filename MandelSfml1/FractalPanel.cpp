@@ -8,6 +8,7 @@
 
 #include "FractalPanel.hpp"
 #include "FractalPixel.hpp"
+#include "FractalArray.hpp"
 
 //float travel = 4;
 //const int startRes = 256;
@@ -17,10 +18,10 @@ float zoom = 0.25;
 float x = 0.0f;
 float y = 0.0f;
 float personalSpace = 0.4f;
-//const FractalPanel &myself;
 
 
-FractalPixel pixels[256][256];
+//FractalPixel pixels[256][256];
+FractalArray pixels;
 
 FractalPanel::FractalPanel() {
     populate();
@@ -30,12 +31,14 @@ FractalPanel::FractalPanel() {
 void FractalPanel::populate() {
     for (int i = 0; i < 256; i++) {
         for (int ii = 0; ii < 256; ii++) {
-            pixels[inx.i(i)][inx.ii(ii)] = FractalPixel(this);
+            //pixels[inx.i(i)][inx.ii(ii)] = FractalPixel(this);
+            *pixels.get(i,ii) = FractalPixel(this);
         }
     }
     for (int i = 0; i < 256; i++) {
         for (int ii = 0; ii < 256; ii++) {
-            pixels[inx.i(i)][inx.ii(ii)].startAt(std::vector<float> {(float) i, (float) ii});
+            //pixels[inx.i(i)][inx.ii(ii)].startAt(std::vector<float> {(float) i, (float) ii});
+            pixels.get(i,ii) -> startAt(std::vector<float> {(float) i, (float) ii});
         }
     }
     solveAll();
@@ -51,21 +54,9 @@ void FractalPanel::arrange() {
 
 
 
-//void FractalPanel::populateSequences() {
-//    for (int i = 0; i < 256; i++) {
-//        seqseq0.sequences[i] = *new Sequence();
-//        seqseq1.sequences[i] = *new Sequence();
-//    }
-//    for (int currentSeq = 0; currentSeq < 256; currentSeq++) {
-//        for (int currentRef = 0; currentRef < 256; currentRef++) {
-//            seqseq0.sequences[currentSeq].refs[currentRef] = &pixels[currentSeq][currentRef];
-//            seqseq1.sequences[currentSeq].refs[currentRef] = &pixels[currentRef][currentSeq];
-//        }
-//    }
-//};
-
 void FractalPanel::dbgSet(int i, int ii, int value) {
-    pixels[inx.i(i)][inx.ii(ii)].mathPt.thisPt[4] += value;
+    //pixels[inx.i(i)][inx.ii(ii)].mathPt.thisPt[4] += value;
+    pixels.get(i,ii) -> mathPt.thisPt[4] += value;
 };
 
 
@@ -73,7 +64,8 @@ void FractalPanel::solveAll() {
     for (int i = 0; i < 256; i++) {
         for (int ii = 0; ii < 256; ii++) {
             //printf("%s %i %i", "\nsolveAll:", i, ii);
-            pixels[i][ii].solve();
+            //pixels[i][ii].solve();
+            pixels.get(i,ii) -> solve();
             //pixels[i][ii].dbgPrintUniq();
         }
     }
@@ -89,7 +81,8 @@ void FractalPanel::drawToPaletteArray(float (&drawTo)[256][256]) {
         //printf("%i\n", i);
         for (int ii = 0; ii < 256; ii++) {
             //printf("    %i\n", ii);
-            drawTo[i][ii] = pixels[inx.i(i)][inx.ii(ii)].getPalette();
+            //drawTo[i][ii] = pixels[inx.i(i)][inx.ii(ii)].getPalette();
+            drawTo[i][ii] = pixels.get(i,ii) -> getPalette();
             //printf("%f", drawTo[i][ii]);
         }
     }
