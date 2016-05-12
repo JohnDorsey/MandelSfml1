@@ -18,6 +18,7 @@ class FractalPixel {
 public:
     //float dbgPositionPalette = 0.0f;
     MathPoint mathPt;
+    float timesSolved = 0.0f;
     bool clueless;
     void dbgPrintUniq();
     FractalPanel* parentPanel;

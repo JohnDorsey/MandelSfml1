@@ -17,6 +17,7 @@
 
 class MathPoint {
 public:
+    bool escaped = false;
     std::vector<float> thisPt;
     MathPoint();
     void moveTo(std::vector<float> newri);

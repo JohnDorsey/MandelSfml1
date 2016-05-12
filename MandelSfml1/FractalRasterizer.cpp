@@ -61,7 +61,7 @@ std::vector<sf::Uint8> FractalRasterizer::colorFromPalette(float index) {
 
 
 int FractalRasterizer::partFromPalette(float index) {
-    return (int) index * 65793;
+    return (int) (index + 96) * 65793;
 };
 
 

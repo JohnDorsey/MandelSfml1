@@ -12,13 +12,11 @@
 //  changing the code in this class can change ONLY the output fractal shape.
 //
 
-
 #include "MathPoint.hpp"
 #include <string>
 
 
 float thresh = 4;
-bool escaped;
 
 MathPoint::MathPoint() {
     moveTo(*new std::vector<float> {1.6f, 1.6f});

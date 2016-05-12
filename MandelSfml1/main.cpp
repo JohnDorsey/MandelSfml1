@@ -19,6 +19,7 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include "FractalVis.hpp"
+#include "FractalArray.hpp"
 
 FractalVis fractVis;
 
@@ -109,8 +110,14 @@ int main(int argc, char const** argv)
         
         fractVis.fractPanel.dbgSet(123, 123, 24);
         fractVis.fractPanel.dbgSet(125, 125, 24);
-        fractVis.fractPanel.inx.incii(1);
+        //fractVis.fractPanel.inx.incii(1);
+        //fractVis.fractPanel.(publicPixels).inx.inci(1);
         //fractVis.fractRast.dbgFillCorner();
+        //fractVis.fractPanel.dah();
+        fractVis.fractPanel.zoom *= 1.005;
+        for (int i = 0; i < 1; i++) {
+            fractVis.fractPanel.arrange();
+        }
         
         fractVis.doFrame(texture);
         // Clear screen

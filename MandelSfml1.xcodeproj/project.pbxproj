@@ -93,6 +93,8 @@
 				523ACA441CB68C48003C22B8 /* FractalPanel.cpp */,
 				5246B1541CDCD21D008F6DF1 /* FractalArray.hpp */,
 				5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */,
+				527075F11CDA201200B956D7 /* FractalOrganizer.hpp */,
+				527075F01CDA201200B956D7 /* FractalOrganizer.cpp */,
 				52FBD3181CB3F40A0022D72D /* FractalPixel.hpp */,
 				52FBD3171CB3F40A0022D72D /* FractalPixel.cpp */,
 				52FBD3151CB3E0EF0022D72D /* MathPoint.hpp */,
@@ -103,8 +105,6 @@
 				52ABCB911CD77C190050E18B /* Sequence2.cpp */,
 				5270FCF11CCFA4F000B28C4C /* Sequence.hpp */,
 				5270FCF01CCFA4F000B28C4C /* Sequence.cpp */,
-				527075F11CDA201200B956D7 /* FractalOrganizer.hpp */,
-				527075F01CDA201200B956D7 /* FractalOrganizer.cpp */,
 				5277343D1C887374008A874A /* Resources */,
 				527734361C887374008A874A /* Supporting Files */,
 			);

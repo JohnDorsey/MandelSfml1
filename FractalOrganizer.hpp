@@ -22,11 +22,10 @@ public:
     FractalOrganizer();
     FractalOrganizer(FractalPanel *nParentPanel);
     void reset();
-    int i(int fi);
-    int ii(int fii);
-    void inci(int amount);
-    void incii(int amount);
-    
+    int i(int fi); int ii(int fii);
+    void inci(int amount); void incii(int amount);
+    void movei(int starti, int endi);
+    void moveii(int startii, int endii);
     
     
 };

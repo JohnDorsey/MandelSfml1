@@ -20,6 +20,6 @@ FractalArray::FractalArray(FractalPanel *nParentPanel) {
     parentPanel = nParentPanel;
 };
 
-FractalPixel* get(int i, int ii) {
-    return &arr[i][ii];
+FractalPixel* FractalArray::get(int i, int ii) {
+    return &arr[inx.i(i)][inx.ii(ii)];
 };

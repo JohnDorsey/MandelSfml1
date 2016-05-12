@@ -23,15 +23,17 @@ void FractalPixel::startAt(std::vector<float> newxy) {
     //printf(" %s %f %f", " SA", newxy[0], newxy[1]);
     //dbgPositionPalette = (newxy[0]) * (newxy[1]);
     mathPt.moveTo(parentPanel -> whatsMyri(newxy));
+    mathPt.escaped = false;
 };
 
 float FractalPixel::getPalette() {
     //return dbgPositionPalette;
-    return (float) mathPt.getIters(); //expand on this as soon as references to neighbors are available!
+    return (float) mathPt.getIters() + (1 * timesSolved); //expand on this as soon as references to neighbors are available!
 };
 
 void FractalPixel::solve() {
     mathPt.solve();
+    timesSolved += 1;
 };
 
 void FractalPixel::dbgPrintUniq() {
