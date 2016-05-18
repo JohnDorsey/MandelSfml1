@@ -115,8 +115,12 @@ int main(int argc, char const** argv)
         //fractVis.fractRast.dbgFillCorner();
         //fractVis.fractPanel.dah();
         fractVis.fractPanel.zoom *= 1.005;
+        //fractVis.fractPanel.x += 0.05;
         for (int i = 0; i < 1; i++) {
             fractVis.fractPanel.arrange();
+            //fractVis.fractPanel.populate();
+            //printf("frame");
+            //fractVis.fractPanel.dah();
         }
         
         fractVis.doFrame(texture);

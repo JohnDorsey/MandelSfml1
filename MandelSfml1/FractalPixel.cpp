@@ -28,7 +28,7 @@ void FractalPixel::startAt(std::vector<float> newxy) {
 
 float FractalPixel::getPalette() {
     //return dbgPositionPalette;
-    return (float) mathPt.getIters() + (1 * timesSolved); //expand on this as soon as references to neighbors are available!
+    return (float) mathPt.getIters() + (0.2 * timesSolved); //expand on this as soon as references to neighbors are available!
 };
 
 void FractalPixel::solve() {

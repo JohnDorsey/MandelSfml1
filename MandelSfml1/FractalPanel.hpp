@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "vector"
 #include "FractalOrganizer.hpp"
+#include "FractalOrderer.hpp"
 
 class FractalPixel;
 class FractalArray;
@@ -22,6 +23,8 @@ class FractalPanel {
 public:
     
     float zoom = 0.25;
+    float x = 0.0f;
+    float y = 0.0f;
     //FractalArray* publicPixels;
     //FractalOrganizer inx;
     FractalPanel();

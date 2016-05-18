@@ -31,7 +31,7 @@ void MathPoint::moveTo(std::vector<float> newri) {
 };
 
 void MathPoint::solve() { //this is only for testing, points will be way smarter in the future.
-    for (; thisPt[4] < 64; ) {
+    for (; thisPt[4] < 1024; ) {
         iter();
         if ((thisPt[0] * thisPt[0]) + (thisPt[1] * thisPt[1]) > 4) { escaped = true; break; }
     }
