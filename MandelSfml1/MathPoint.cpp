@@ -43,6 +43,7 @@ void MathPoint::iter() {
 };
 
 int MathPoint::getIters() {
+    //return (int) ((thisPt[2] + thisPt[3]) * 30) + 128;
     return (escaped? (thisPt[4] * 8.0f) : 0.0f); //fix this later!
     //dbgPrintUniq();
     //return (thisPt[0] + thisPt[1] ) * 256;

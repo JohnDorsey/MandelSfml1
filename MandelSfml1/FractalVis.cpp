@@ -24,6 +24,7 @@ sf::Uint8 colors1DUint8[262144];
 
 
 FractalVis::FractalVis() {
+    printf("creating a FractalVis.\n");
     fractRast = *new FractalRasterizer(&fractPanel);
 };
 
@@ -41,10 +42,4 @@ void FractalVis::drawFrame(sf::Texture& screen) {
     screen.loadFromImage(frame); //display the image
 };
 
-
-//
-//void FractalVis::drawFrame(sf::Texture& drawingOn) {
-//        frame.flipVertically();
-//        drawingOn.update(frame);
-//}
 

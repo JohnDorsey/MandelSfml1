@@ -9,6 +9,7 @@
 #include "FractalPanel.hpp"
 #include "FractalPixel.hpp"
 #include "FractalArray.hpp"
+#include "MovementAdvisor.hpp"
 
 //float travel = 4;
 //const int startRes = 256;
@@ -22,9 +23,12 @@ float perLandDeviation = 1.1f; //must always be lower in difference from 1 than 
 //FractalPixel pixels[256][256];
 //FractalArray pixels;
 FractalArray pixels;
-FractalOrderer consultant;
+//FractalOrderer consultant;
+
+MovementAdvisor consultant;
 
 FractalPanel::FractalPanel() {
+    printf("creating a FractalPanel with no arguments.\n");
     //publicPixels = &pixels;
     populate();
 };
@@ -49,114 +53,46 @@ void FractalPanel::populate() {
 
 
 void FractalPanel::dah() {
-    pixels.inx.movei(20,40);
-    solvei(40);
-    pixels.inx.movei(80,60);
-    solvei(60);
+    pixels.inx.movei(20,80);
+    //solvei(40);
+    pixels.inx.movei(240,180);
+    //solvei(60);
 };
 
 
-//void FractalPanel::arrange() {
-//    bool flying[256]; //if a column is flying, it cast off into space to be ignored for a little while. by the end of this method, all rows and columns must land somewhere.
-//    bool landZone[256];
-//    float perBubble = ((1 / zoom) / 256) * perAverage; //base for determining how close two columns must be for one to be launched (always the one on the right)
-//    float tempDistances[257];
-//    float lastr = whatsMyr(0) - perBubble;
-//    for (int ati = 0; ati < 256; ati++) {
-//        tempDistances[ati] = (pixels.get(ati,0) -> mathPt.thisPt[2]) - lastr;
-//        lastr = (pixels.get(ati,0) -> mathPt.thisPt[2]);
-//        printf(" %f", tempDistances[ati]);
-//    }
-//    printf("%s %f %f %f %s", "\n######", perFlyDeviation, perLandDeviation, perBubble, "########\n" );
-//    tempDistances[256] = whatsMyr(256) - (pixels.get(255,0) -> mathPt.thisPt[2]);
-//    
-//    // there is now an array of
-//    // |    #    #    |
-//    //  dist,dist,dist
-//    // horizontally.
-//    // any column with a dist lower than (perFlyDeviation * perBubble) will take off,
-//    // any column with a dist higher than (perLandDeviation * perBubble) is a valid place to land. rearranging them will be FractalArray's responsibility.
-//    
-//    for (int ati = 0; ati < 256; ati++) {
-//        if (tempDistances[ati] < (perFlyDeviation * perBubble)) {
-//            flying[ati] = true;
-//        }
-//        if (tempDistances[ati] > (perLandDeviation * perBubble)) {
-//            landZone[ati] = true;
-//        }
-//    }
-//    
-//    //we now know which columns need to launch (flying[]) and where they need to end up in no particular order (landZone[])
-//    
-//    for (int flyi = 0; flyi < 256; flyi++) {
-//        if (flying[flyi]) {
-//            for (int landi = 0; landi <256; landi++) {
-//                if (landZone[landi]) {
-//                    pixels.inx.movei(flyi, landi);
-//                    solvei(landi);
-//                    //break;
-//                }
-//            }
-//            //break;
-//        }
-//    }
-//    
-//};
 
-
-
-//void FractalPanel::arrange() {
-//    
-////    float perBubble = ((1 / zoom) / 256) * perAverage; //base for determining how close two columns must be for one to be launched (always the one on the right)
-////    float tempDistances[257];float lastr = whatsMyr(0) - perBubble;
-////    for (int ati = 0; ati < 256; ati++) {
-////        tempDistances[ati] = (pixels.get(ati,0) -> mathPt.thisPt[2]) - lastr;
-////        lastr = (pixels.get(ati,0) -> mathPt.thisPt[2]);
-////        //printf(" %f", tempDistances[ati]);
-////    }
-//    
-//    float hypf[256];
-//    for (int hypi = 0; hypi < 256; hypi++) {
-//        hypf[hypi] = whatsMyr(hypi);
-//    }
-//    float actf[256];
-//    for (int acti = 0; acti < 256; acti++) {
-//        actf[acti] = pixels.get(acti, 0) -> mathPt.thisPt[2];
-//    }
-//    
-//    float maxDist = 0; float curDist = 0;
-//    for (int maxi = 0; maxi < 256; maxi++) {
-//        curDist = hypf[maxi] - actf[maxi]; if (curDist < 0) { curDist *= -1; }
-//        maxDist = (maxDist<curDist)? curDist : maxDist;
-//    }
-//    
-//    
-//    
-//    
 //};
 
 void FractalPanel::arrange() {
+    arrange(true);
+    arrange(false);
+};
+
+void FractalPanel::arrange(bool p) {
+    //std::vector<int> instructions[256] = std::__1::vector<int, std::__1::allocator<int>>(2);
+    //std::__1::vector<int, std::__1::allocator<int>>(2); instructions[256];
+    std::vector<int> instructions[256]; fill(instructions, instructions + 256, std::vector<int>(2));
     float tmpActualCoords[256];
     float tmpIdealCoords[256];
     for (int at = 0; at < 256; at++) {
-        tmpIdealCoords[at] = whatsMyr(at);
-        tmpActualCoords[at] = pixels.get(at, 0) -> mathPt.thisPt[2];
+        tmpIdealCoords[at] = p? whatsMyr(at) : whatsMyi(at);
+        tmpActualCoords[at] = pixels.get(p? at : 0, p? 0 : at) -> mathPt.thisPt[p? 2 : 3];
     }
-    int newOrder[256];
-    consultant.figureOrder(tmpActualCoords, tmpIdealCoords);
-    consultant.writeOrderTo(newOrder);
-    int totalMoved = 0;
-    for (int i = 0; i < 256; i++) {
-        if (newOrder[i] != i) {
-            pixels.inx.movei(i, newOrder[i]);
-            solvei(newOrder[i]);
-            totalMoved++;
+    consultant.writeInstructionsTo(tmpActualCoords, tmpIdealCoords, instructions);
+    
+    int handling;
+    for (handling = 0; handling < 256; handling++) {
+        if (instructions[handling][0] < 0) { printf("%s %i %s %i%s%i%s", "breaking because instruction", handling, "is", instructions[handling][0], ", ", instructions[handling][1], ".\n\n"); break; }
+        //pixels.inx.swapi(instructions[handling][0], instructions[handling][1]);
+        printf("%s%i%s", "handling instruction ", handling, ": "); printf("%i%s%i%s", instructions[handling][0], ", ", instructions[handling][1], ":\n");
+        if (p) {
+            pixels.inx.movei(instructions[handling][0], instructions[handling][1]);
+            solvei(instructions[handling][1]);
+        } else {
+            pixels.inx.moveii(instructions[handling][0], instructions[handling][1]);
+            solveii(instructions[handling][1]);
         }
     }
-    
-    printf("%s %i %s", "total moved:", totalMoved, "\n");
-    
-    
 };
 
 
@@ -179,9 +115,18 @@ void FractalPanel::solveAll() {
 };
 
 void FractalPanel::solvei(int iToSolve) {
+    printf("%s%i%s", "solvei: solving ", iToSolve, ".\n");
     for (int ii = 0; ii < 256; ii++) {
         pixels.get(iToSolve, ii) -> startAt(std::vector<float> {(float) iToSolve, (float) ii});
         pixels.get(iToSolve, ii) -> solve();
+    }
+};
+
+void FractalPanel::solveii(int iiToSolve) {
+    printf("%s%i%s", "solveii: solving ", iiToSolve, ".\n");
+    for (int i = 0; i < 256; i++) {
+        pixels.get(i, iiToSolve) -> startAt(std::vector<float> {(float) i, (float) iiToSolve});
+        pixels.get(i, iiToSolve) -> solve();
     }
 };
 
@@ -217,8 +162,8 @@ float FractalPanel::whatsMyr(float chx) {
 };
 
 float FractalPanel::whatsMyi(float chy) {
-    //return (((chy / 256.0f) - 0.5f) / zoom) + y;
-    return (((chy / 256.0f) - 0.5f) / 0.25);
+    return (((chy / 256.0f) - 0.5f) / zoom) + y;
+    //return (((chy / 256.0f) - 0.5f) / 0.25);
 };
 
 

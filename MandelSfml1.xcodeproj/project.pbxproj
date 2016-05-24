@@ -12,6 +12,9 @@
 		5261F7B51CE9F25400D21FE0 /* SequenceLeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5261F7B31CE9F25400D21FE0 /* SequenceLeader.cpp */; };
 		5261F7B81CE9F80100D21FE0 /* FractalOrderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5261F7B61CE9F80100D21FE0 /* FractalOrderer.cpp */; };
 		527075F21CDA201200B956D7 /* FractalOrganizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 527075F01CDA201200B956D7 /* FractalOrganizer.cpp */; };
+		52750D6C1CECA0CE00A900A3 /* MovementAdvisor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52750D6A1CECA0CE00A900A3 /* MovementAdvisor.cpp */; };
+		52750D701CECAA6500A900A3 /* LaunchSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52750D6E1CECAA6500A900A3 /* LaunchSelector.cpp */; };
+		52750D731CECAA8500A900A3 /* LandSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52750D711CECAA8500A900A3 /* LandSelector.cpp */; };
 		527734391C887374008A874A /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 527734381C887374008A874A /* ResourcePath.mm */; };
 		527734411C887374008A874A /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 527734401C887374008A874A /* nice_music.ogg */; };
 		527734431C887374008A874A /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 527734421C887374008A874A /* sansation.ttf */; };
@@ -35,6 +38,12 @@
 		5261F7B71CE9F80100D21FE0 /* FractalOrderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FractalOrderer.hpp; sourceTree = "<group>"; };
 		527075F01CDA201200B956D7 /* FractalOrganizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FractalOrganizer.cpp; path = ../FractalOrganizer.cpp; sourceTree = "<group>"; };
 		527075F11CDA201200B956D7 /* FractalOrganizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FractalOrganizer.hpp; path = ../FractalOrganizer.hpp; sourceTree = "<group>"; };
+		52750D6A1CECA0CE00A900A3 /* MovementAdvisor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovementAdvisor.cpp; sourceTree = "<group>"; };
+		52750D6B1CECA0CE00A900A3 /* MovementAdvisor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovementAdvisor.hpp; sourceTree = "<group>"; };
+		52750D6E1CECAA6500A900A3 /* LaunchSelector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaunchSelector.cpp; sourceTree = "<group>"; };
+		52750D6F1CECAA6500A900A3 /* LaunchSelector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchSelector.hpp; sourceTree = "<group>"; };
+		52750D711CECAA8500A900A3 /* LandSelector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandSelector.cpp; sourceTree = "<group>"; };
+		52750D721CECAA8500A900A3 /* LandSelector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LandSelector.hpp; sourceTree = "<group>"; };
 		527734331C887374008A874A /* MandelSfml1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelSfml1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527734371C887374008A874A /* MandelSfml1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MandelSfml1-Info.plist"; sourceTree = "<group>"; };
 		527734381C887374008A874A /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -91,20 +100,26 @@
 				52A79DEF1CBE73E5008A060F /* FractalRasterizer.cpp */,
 				523ACA451CB68C48003C22B8 /* FractalPanel.hpp */,
 				523ACA441CB68C48003C22B8 /* FractalPanel.cpp */,
-				5246B1541CDCD21D008F6DF1 /* FractalArray.hpp */,
-				5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */,
-				527075F11CDA201200B956D7 /* FractalOrganizer.hpp */,
-				527075F01CDA201200B956D7 /* FractalOrganizer.cpp */,
-				5261F7B71CE9F80100D21FE0 /* FractalOrderer.hpp */,
-				5261F7B61CE9F80100D21FE0 /* FractalOrderer.cpp */,
+				52750D6B1CECA0CE00A900A3 /* MovementAdvisor.hpp */,
+				52750D6A1CECA0CE00A900A3 /* MovementAdvisor.cpp */,
+				52750D6F1CECAA6500A900A3 /* LaunchSelector.hpp */,
+				52750D6E1CECAA6500A900A3 /* LaunchSelector.cpp */,
+				52750D721CECAA8500A900A3 /* LandSelector.hpp */,
+				52750D711CECAA8500A900A3 /* LandSelector.cpp */,
 				52FBD3181CB3F40A0022D72D /* FractalPixel.hpp */,
 				52FBD3171CB3F40A0022D72D /* FractalPixel.cpp */,
 				52FBD3151CB3E0EF0022D72D /* MathPoint.hpp */,
 				52FBD3141CB3E0EF0022D72D /* MathPoint.cpp */,
+				5246B1541CDCD21D008F6DF1 /* FractalArray.hpp */,
+				5246B1531CDCD21D008F6DF1 /* FractalArray.cpp */,
+				527075F11CDA201200B956D7 /* FractalOrganizer.hpp */,
+				527075F01CDA201200B956D7 /* FractalOrganizer.cpp */,
 				527734381C887374008A874A /* ResourcePath.mm */,
 				5277343A1C887374008A874A /* ResourcePath.hpp */,
 				5261F7B41CE9F25400D21FE0 /* SequenceLeader.hpp */,
 				5261F7B31CE9F25400D21FE0 /* SequenceLeader.cpp */,
+				5261F7B71CE9F80100D21FE0 /* FractalOrderer.hpp */,
+				5261F7B61CE9F80100D21FE0 /* FractalOrderer.cpp */,
 				5277343D1C887374008A874A /* Resources */,
 				527734361C887374008A874A /* Supporting Files */,
 			);
@@ -218,9 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				528E94491C984A8200003018 /* FractalVis.cpp in Sources */,
+				52750D731CECAA8500A900A3 /* LandSelector.cpp in Sources */,
 				5261F7B81CE9F80100D21FE0 /* FractalOrderer.cpp in Sources */,
 				5261F7B51CE9F25400D21FE0 /* SequenceLeader.cpp in Sources */,
+				52750D6C1CECA0CE00A900A3 /* MovementAdvisor.cpp in Sources */,
 				52FBD3191CB3F40A0022D72D /* FractalPixel.cpp in Sources */,
+				52750D701CECAA6500A900A3 /* LaunchSelector.cpp in Sources */,
 				527734391C887374008A874A /* ResourcePath.mm in Sources */,
 				52FBD3161CB3E0EF0022D72D /* MathPoint.cpp in Sources */,
 				5246B1551CDCD21D008F6DF1 /* FractalArray.cpp in Sources */,

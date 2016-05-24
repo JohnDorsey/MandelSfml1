@@ -21,17 +21,12 @@
 #include "FractalVis.hpp"
 #include "FractalArray.hpp"
 
-FractalVis fractVis;
 
 int main(int argc, char const** argv)
 {
     
-    // Create the main window
-    sf::RenderWindow window(sf::VideoMode(512, 512), "SFML window");
+    printf("%li: Application is running.\n", std::time(nullptr));
     
-    printf("a");
-    
-    // Set the Icon
     //sf::Image icon;
     //if (!icon.loadFromFile("icon.png")) {
     //    return EXIT_FAILURE;
@@ -50,8 +45,9 @@ int main(int argc, char const** argv)
     sprite.setPosition(0.0f, 512.0f);
     sprite.setScale(2.0f, 2.0f);
     sprite.setRotation(270.0f);
+    
+    printf("loaded textures and sprites.\n");
 
-    // Create a graphical text to display
     //sf::Font font;
     //if (!font.loadFromFile("sansation.ttf")) {
     //    return EXIT_FAILURE;
@@ -59,21 +55,27 @@ int main(int argc, char const** argv)
     //sf::Text text("Hello SFML", font, 50);
     //text.setColor(sf::Color::Black);
 
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile("nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
-
-    // Play the music
-    music.play();
-
+    
+//    sf::Music music;
+//    if (!music.openFromFile("nice_music.ogg")) {
+//        return EXIT_FAILURE;
+//    }
+//    printf("loaded music.\n");
+//    music.play();
+    
+    
+    FractalVis fractVis;
     
     fractVis.doFrame(texture);
+    int frameCount = 0;
+    
+    
+    sf::RenderWindow window(sf::VideoMode(512, 512), "SFML window");
     
     // Start the game loop
     while (window.isOpen())
     {
+        printf("%s%i%s", "Frame ", ++frameCount, ":");
         // Process events
         sf::Event event;
         while (window.pollEvent(event))
@@ -97,31 +99,18 @@ int main(int argc, char const** argv)
             }
         }
         
-        //for (int ti = 0; ti < 12800; ti++) {
-        //    fractVis.fractRast.fractPanel.inx.inci(1);
-        //    fractVis.fractRast.fractPanel.inx.incii(1);
-        //}
-        //for (int ti = 0; ti < 12799; ti++) {
-        //    fractVis.fractRast.fractPanel.inx.inci(-1);
-        //    fractVis.fractRast.fractPanel.inx.incii(-1);
-        //}
-        //fractVis.fractRast.fractPanel.inx.incii(2);
-        //fractVis.fractRast.fractPanel.inx.incii(1);
         
-        fractVis.fractPanel.dbgSet(123, 123, 24);
-        fractVis.fractPanel.dbgSet(125, 125, 24);
-        //fractVis.fractPanel.inx.incii(1);
-        //fractVis.fractPanel.(publicPixels).inx.inci(1);
-        //fractVis.fractRast.dbgFillCorner();
+        //fractVis.fractPanel.dbgSet(123, 123, 24);
+        //fractVis.fractPanel.dbgSet(125, 125, 24);
         //fractVis.fractPanel.dah();
         fractVis.fractPanel.zoom *= 1.005;
         //fractVis.fractPanel.x += 0.05;
-        for (int i = 0; i < 1; i++) {
+        //for (int i = 0; i < 1; i++) {
             fractVis.fractPanel.arrange();
             //fractVis.fractPanel.populate();
             //printf("frame");
             //fractVis.fractPanel.dah();
-        }
+        //}
         
         fractVis.doFrame(texture);
         // Clear screen
@@ -138,12 +127,6 @@ int main(int argc, char const** argv)
         // Update the window
         window.display();
         
-        //printf("%i %i", texture.getSize().x, texture.getSize().y);
-        
-        //printf(" frameComplete");
-//        for (int i = 0; i < 524288; i++) {
-//            printf("AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMMNNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZ");
-//        }
     }
 
     return EXIT_SUCCESS;

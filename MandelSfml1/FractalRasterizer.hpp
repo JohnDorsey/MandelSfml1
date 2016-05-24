@@ -25,7 +25,6 @@ public:
     std::vector<sf::Uint8> colorFromPalette(float index);
     int partFromPalette(float index);
     void dbgFillCorner();
-//    void recieveNewArray(float (&inputArray)[256][256]);
 };
 
 

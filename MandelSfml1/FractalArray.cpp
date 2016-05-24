@@ -13,7 +13,7 @@
 FractalPixel arr[256][256];
 
 FractalArray::FractalArray() {
-    
+    printf("Creating a FractalArray.\n");
 };
 
 FractalArray::FractalArray(FractalPanel *nParentPanel) {

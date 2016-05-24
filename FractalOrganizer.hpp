@@ -26,6 +26,8 @@ public:
     void inci(int amount); void incii(int amount);
     void movei(int starti, int endi);
     void moveii(int startii, int endii);
+    void swapi(int first, int second);
+    void swapii(int first, int second);
     
     
 };

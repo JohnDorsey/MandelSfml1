@@ -13,6 +13,7 @@
 #include "vector"
 #include "FractalOrganizer.hpp"
 #include "FractalOrderer.hpp"
+class MovementAdvisor;
 
 class FractalPixel;
 class FractalArray;
@@ -29,14 +30,13 @@ public:
     //FractalOrganizer inx;
     FractalPanel();
     void dbgSet(int i, int ii, int value);
-//    Sequence2 seqseq0;
-//    Sequence2 seqseq1;
     void populate();
     void arrange();
-//    void populateSequences();
+    void arrange(bool p);
     void drawToPaletteArray(float (&drawTo)[256][256]);
     void solveAll();
     void solvei(int iToSolve);
+    void solveii(int iiToSolve);
     std::vector<float> whatsMyri(std::vector<float> chxy);
     float whatsMyr(float chx);
     float whatsMyi(float chy);
