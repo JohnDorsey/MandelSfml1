@@ -81,7 +81,7 @@ void FractalPanel::arrange(bool p) {
     consultant.writeInstructionsTo(tmpActualCoords, tmpIdealCoords, instructions);
     
     int handling;
-    for (handling = 0; handling < 256; handling++) {
+    for (handling = 0; handling < 1; handling++) {
         if (instructions[handling][0] < 0) { printf("%s %i %s %i%s%i%s", "breaking because instruction", handling, "is", instructions[handling][0], ", ", instructions[handling][1], ".\n\n"); break; }
         //pixels.inx.swapi(instructions[handling][0], instructions[handling][1]);
         printf("%s%i%s", "handling instruction ", handling, ": "); printf("%i%s%i%s", instructions[handling][0], ", ", instructions[handling][1], ":\n");

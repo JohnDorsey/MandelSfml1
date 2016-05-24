@@ -105,7 +105,7 @@ int main(int argc, char const** argv)
         //fractVis.fractPanel.dah();
         fractVis.fractPanel.zoom *= 1.005;
         //fractVis.fractPanel.x += 0.05;
-        //for (int i = 0; i < 1; i++) {
+        //for (int i = 0; i < 16; i++) {
             fractVis.fractPanel.arrange();
             //fractVis.fractPanel.populate();
             //printf("frame");

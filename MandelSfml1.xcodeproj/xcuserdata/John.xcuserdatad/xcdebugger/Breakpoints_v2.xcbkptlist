@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MandelSfml1/LandSelector.cpp"
-            timestampString = "485794159.753886"
+            timestampString = "485795250.575689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "LandSelector::selectSome(float idealCoords[256], float actualCoords[256], int (&amp;outsideOrder)[256])"
             landmarkType = "5">
          </BreakpointContent>
